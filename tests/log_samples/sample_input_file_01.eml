@@ -1,0 +1,78 @@
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from test4.test.com (test4.test.com [192.168.100.99])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mta.test4.test.com (Postfix) with ESMTPS id 7B045D8621
+	for <none@none.com>; Sun, 27 Oct 2024 16:01:01 -0400 (EDT)
+Received: from test4.test.com (localhost [127.0.0.1])
+	by test4.test.com (Postfix) with ESMTP id 70FHHDDE
+	for <none@none.com>; Sun, 27 Oct 2024 16:01:01 -0400 (EDT)
+Received: from X500P (none.none.com [192.168.0.0])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384)
+	(No client certificate requested)
+	by test4.test.com (Postfix) with ESMTPSA id 419EEBB8621
+	for <none@none.com>; Sun, 27 Oct 2024 16:01:01 -0400 (EDT)
+DATE: 27 Oct 2024 16:01:00
+FROM: <none@none.com>
+To: <none@none.com>
+Sender: root@X500P
+Subject: SUPERROUTER X500P Log [EA:0C:00]
+MIME-Version: 1.0
+Content-type: text/plain; charset=US-ASCII
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=none.com; h=date:from:to:sender:subject:mime-version:content-type;
+X-Scanned-By: mailm 3.11 on 0.0.0.1
+Message-Id: <2024@test4.test.com>
+Received-SPF: permerror (none.com: Redundant applicable 'v=1' sender policies found) receiver=test4.test.com; identity=mailfrom; envelope-from="none@none.com"; helo=test4.test.com; client-ip=0.0.0.1
+X-Whitelisting: none@none.com whitelisted
+X-Spam-Status: No, hits=-101.6 required=5.0 tests=ALL_TRUSTED,DATE_IN_PAST_03_06,DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,DKIM_VALID_EF,T_SPF_PERMERROR,USER_IN_WELCOMELIST autolearn=disabled version=4.000000
+X-Spam-Flag: NO
+X-Spam-Filtered: ad38FFAATTdc04
+X-Spam-Check-By: test4.test.com
+X-Scanned-By: mailm 3.11 on 0.0.0.1
+Delivered-To: none@none.com
+X-Envelope-To: none@none.com
+Return-Path: <none@none.com>
+
+[DHCP IP: (10.0.0.10)] to MAC address 01:01:06:06:CE:AA, Sunday, Oct 27,2024 13:30:46
+[WLAN access rejected: incorrect security] from MAC 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 13:30:35
+[DHCP IP: (10.0.0.18)] to MAC address AA:66:FF:B6:99:72, Sunday, Oct 27,2024 13:15:21
+[WLAN access rejected: incorrect security] from MAC 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 13:15:20
+[DHCP IP: (10.0.0.5)] to MAC address 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:53:01
+[WLAN access rejected: incorrect security] from MAC 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:53:01
+[Access Control ] invalid access from source BB:39:55:EE:0C:77 Sunday, Oct 27,2024 12:53:01
+[DHCP IP: (10.0.0.5)] to MAC address 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:47:21
+[WLAN access rejected: incorrect security] from MAC 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:47:10
+[Admin login] from source 10.0.0.8, Sunday, Oct 27,2024 12:37:41
+[Access Control] Device TV with MAC address 00:18:22:8D:BB:A4 is allowed to access the network. Sunday, Oct 27,2024 12:30:23
+[Access Control] Device DESKTOP with MAC address 44:33:11:99:99:66 is allowed to access the network. Sunday, Oct 27,2024 12:30:23
+[Admin login] from source 10.0.0.8, Sunday, Oct 27,2024 12:29:57
+[DHCP IP: (10.0.0.16)] to MAC address 1A:1E:77:88:78:78, Sunday, Oct 27,2024 12:29:30
+[WLAN access rejected: incorrect security] from MAC 1A:1E:77:88:78:78, Sunday, Oct 27,2024 12:29:29
+[Access Control ] invalid access from source 1A:1E:77:88:78:78 Sunday, Oct 27,2024 12:29:29
+[DHCP IP: (10.0.0.14)] to MAC address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:19:15
+[WLAN access rejected: incorrect security] from MAC 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:19:14
+[Admin login] from source 10.0.0.8, Sunday, Oct 27,2024 12:18:04
+[DHCP IP: (10.0.0.14)] to MAC address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:17:32
+[Site blocked: www.website.com] from MAC Address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:18:00
+[WLAN access rejected: incorrect security] from MAC 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:17:32
+[DHCP IP: (10.0.0.11)] to MAC address AA:66:FF:B6:99:72, Sunday, Oct 27,2024 12:14:11
+[DHCP IP: (10.0.0.10)] to MAC address 00:A0:00:EE:CF:00, Saturday, Oct 26,2024 21:57:28
+[WLAN access rejected: incorrect security] from MAC F0:00:10:50:09:50, Saturday, Oct 26,2024 21:57:23
+[Time synchronized with NTP server] Saturday, Oct 26,2024 19:45:29
+[Internet connected] IP address: 10.0.0.57, Saturday, Oct 26,2024 19:45:27
+[email sent to: nothing@none.com] Saturday, Oct 26,2024 16:01:02
+[email sent to: none@none.com] Saturday, Oct 26,2024 16:01:01
+
+Received: from test4.test.com (test4.test.com [0.0.0.1])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_S84 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mta.test4.test.com (Postfix) with ESMTPS id 27E1A
+	for <none@none.com>; Sat,  9 Nov 2024 16:01:01 -0500 (EST)
+Received: from test4.test.com (localhost [127.0.0.1])
+	by test4.test.com (Postfix) with ESMTP id 232F8B1CCCCC20
+	for <none@none.com>; Sat,  9 Nov 2024 16:01:01 -0500 (EST)
+Received: from X500P (none.none.com [0.2.0.0])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHSAFFF (256/256 bits)
