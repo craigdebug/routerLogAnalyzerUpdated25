@@ -29,17 +29,22 @@ def find_lan_access_rejected(entries, entry_date):
     print("\n\tHere is a list MAC addresses that were rejected access...")
     if len(mac_addresses_wlan_access_rejected) == 0:
         print("\t\tNone")
-    for address in mac_addresses_wlan_access_rejected:
+    for match_sequence_number, address in enumerate(mac_addresses_wlan_access_rejected):
+        sequenced_entry_date = "".join([entry_date, "-", str(match_sequence_number)])
         if address in recognizedmacs.recognizedmacaddresses:
             print(
                 f"\t\tRejected - Recognized "
                 f"{address} as "
                 f"{str(recognizedmacs.recognizedmacaddresses.get(address))}"
             )
-            wlan_accesses_rejected.update({entry_date: (address, "recognized")})
+            wlan_accesses_rejected.update(
+                {sequenced_entry_date: (address, "recognized")}
+            )
         else:
             print(f"\t\t!! Rejected - Did not recognize {address}")
-            wlan_accesses_rejected.update({entry_date: (address, "not recognized")})
+            wlan_accesses_rejected.update(
+                {sequenced_entry_date: (address, "not recognized")}
+            )
 
     return wlan_accesses_rejected
 
@@ -60,9 +65,12 @@ def find_site_blocked(entries, entry_date):
     if len(list_site_blocked) == 0:
         print("\t\tNone")
     else:
-        for entry in list_site_blocked:
+        for match_sequence_number, website in enumerate(list_site_blocked):
+            sequenced_entry_date = "".join(
+                [entry_date, "-", str(match_sequence_number)]
+            )
             print(f"\t\t{str(list_site_blocked)}")
-            blocked_sites.update({entry_date: entry})
+            blocked_sites.update({sequenced_entry_date: website})
 
     return blocked_sites
 
@@ -88,7 +96,8 @@ def find_unknown_macs(entries, entry_date):
             print(mac_addresses_given_ip)
     # check if the mac addresses in the entries are in the recognized list
     print("\n\tNow checking MAC addresses that requested DHCP IP...")
-    for address in mac_addresses_given_ip:
+    for match_sequence_number, address in enumerate(mac_addresses_given_ip):
+        sequenced_entry_date = "".join([entry_date, "-", str(match_sequence_number)])
         if address in recognizedmacs.recognizedmacaddresses:
             print(
                 "\t\tRecognized "
@@ -98,6 +107,6 @@ def find_unknown_macs(entries, entry_date):
             )
         else:
             print("\t\t!! Did not recognize " + address)
-            unknown_macs.update({entry_date: address})
+            unknown_macs.update({sequenced_entry_date: address})
 
     return unknown_macs
