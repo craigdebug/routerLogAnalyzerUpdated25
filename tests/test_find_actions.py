@@ -83,7 +83,9 @@ def test_router_log_analyzer_find_actions_find_unknown_macs(
         ),  # no matches case
         (
             # 1 match case
-            ["[Site blocked: www.website.com] from MAC Address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:18:00"],
+            [
+                "[Site blocked: www.website.com] from MAC Address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:18:00"
+            ],
             "Sunday, Oct 27,2024 12:14:11",
             1,
         ),
