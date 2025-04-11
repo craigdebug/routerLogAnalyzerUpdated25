@@ -45,6 +45,7 @@ Return-Path: <none@none.com>
 [DHCP IP: (10.0.0.5)] to MAC address 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:47:21
 [WLAN access rejected: incorrect security] from MAC 55:CC:EA:DF:DD:AA, Sunday, Oct 27,2024 12:47:10
 [Admin login] from source 10.0.0.8, Sunday, Oct 27,2024 12:37:41
+[Site blocked: www.anotherwebsite.com] from MAC Address 00:A0:00:EE:CF:00, Sunday, Oct 27,2024 12:18:00
 [Access Control] Device TV with MAC address 00:18:22:8D:BB:A4 is allowed to access the network. Sunday, Oct 27,2024 12:30:23
 [Access Control] Device DESKTOP with MAC address 44:33:11:99:99:66 is allowed to access the network. Sunday, Oct 27,2024 12:30:23
 [Admin login] from source 10.0.0.8, Sunday, Oct 27,2024 12:29:57

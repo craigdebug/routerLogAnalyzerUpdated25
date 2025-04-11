@@ -3,7 +3,6 @@ Listing of recognized MAC addresses.
     MAC addresses here are fake.
 """
 
-
 recognizedmacaddresses = dict(
     [
         ("AA:66:FF:B6:99:72", "Other Device"),
